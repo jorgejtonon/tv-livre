@@ -45,10 +45,10 @@ window.TV_CATALOG = {
       id: "sbt", num: 2, name: "SBT", short: "SBT", hue: 4, category: "principais", featured: true,
       tagline: "Pelas afiliadas, sinal nacional",
       sources: [
-        { type: "hls", url: "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8", label: "SBT Interior · servidor 2", origin: "afiliada" },
         { type: "hls", url: "https://6836041ea1117.streamlock.net/cverde/cverde/playlist.m3u8", label: "TV Cidade Verde (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://video09.logicahost.com.br/sbtroo/sbtroo/playlist.m3u8", label: "SBT Rondonópolis (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8", label: "SBT Interior (afiliada)", origin: "afiliada" },
+        { type: "hls", url: "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8", label: "SBT Interior · servidor 2", origin: "afiliada" },
         { type: "hls", url: "https://video09.logicahost.com.br/sbtcuiaba/sbtcuiaba/playlist.m3u8", label: "SBT Cuiabá (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://video09.logicahost.com.br/sbtmutum/sbtmutum/playlist.m3u8", label: "SBT Nova Mutum (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://stream.amsolution.net.br:8443/live/60d0a8ea6b884/index.m3u8", label: "TV Difusora Leste (afiliada)", origin: "afiliada" },
