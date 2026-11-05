@@ -1,5 +1,5 @@
 /* TV Livre — service worker: guarda só os arquivos do app (nunca o vídeo) */
-const CACHE = 'tvlivre-3.0.0';
+const CACHE = 'tvlivre-3.0.1';
 const SHELL = ['./', 'index.html', 'app.js', 'channels.js', 'hls.min.js', 'archivo.woff2', 'mono.woff2', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {

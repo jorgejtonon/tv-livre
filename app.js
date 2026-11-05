@@ -3,7 +3,7 @@
   'use strict';
 
   const CAT = window.TV_CATALOG;
-  const VERSION = '3.0.0';
+  const VERSION = '3.0.1';
   const UPDATE_URLS = {
     iptvorg: 'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/br.m3u',
     freetv: 'https://raw.githubusercontent.com/Free-TV/IPTV/master/lists/brazil.md'
@@ -766,7 +766,7 @@
       for (const e of parseFreeTv(b.value.text)) {
         const id = FREETV_MAP[norm(e.name)]; if (!id || id === 'globo') continue;
         const vid = /youtube\.com|youtu\.be/.test(e.url) ? ytId(e.url) : null;
-        if (vid) push(id, { type: 'youtube', video: vid, label: 'YouTube oficial · atualizado', origin: 'oficial', front: true });
+        if (vid) push(id, { type: 'youtube', video: vid, label: 'YouTube oficial · atualizado', origin: 'oficial' });
         else if (allowedUrl(e.url)) push(id, { type: 'hls', url: e.url, label: `${e.name} · lista Free-TV`, origin: 'comunidade' });
       }
     }
@@ -830,7 +830,7 @@
     openSheet('Como funciona', [
       h('p', null, h('strong', null, 'Como o app escolhe a transmissão. '), 'Cada canal tem várias fontes: a oficial da emissora, afiliadas que publicam o próprio sinal e canais gratuitos oficiais. Se uma não responde, o player pula para a próxima em segundos e lembra qual funcionou.'),
       h('p', null, h('strong', null, 'Globo. '), 'O sinal ao vivo gratuito existe só no Globoplay (conta Globo grátis e localização ligada) e é protegido contra cópia. Por isso o botão da Globo abre o Globoplay. No app você assiste ao ge TV, canal gratuito oficial do Grupo Globo.'),
-      h('p', null, h('strong', null, 'SBT. '), 'Toca pelo YouTube oficial do SBT dentro do app, com afiliadas como reserva.'),
+      h('p', null, h('strong', null, 'SBT. '), 'Toca pelas afiliadas que publicam o próprio sinal (programação nacional do SBT). O SBT não permite exibir o YouTube dele fora do YouTube, então o vídeo do YouTube fica só como última tentativa e como atalho.'),
       h('p', null, h('strong', null, 'Record. '), 'Toca por fonte pública de afiliada, que pode cair. O Record News, oficial e 24h, toca direto no app. O sinal completo oficial fica no site R7 e no RecordPlus.'),
       h('p', null, h('strong', null, 'Atualização. '), 'Uma vez por semana o app confere as listas públicas iptv-org e Free-TV e adiciona endereços novos desses mesmos canais, sempre com a mesma regra: só HTTPS, sem canal pago e sem captura de satélite.'),
       h('p', null, h('strong', null, 'Atalhos no computador. ')),

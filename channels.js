@@ -19,8 +19,8 @@
  * de fontes (só endereços que passam pela mesma regra acima).
  */
 window.TV_CATALOG = {
-  version: "3.0.0",
-  curated: "2026-11-05",
+  version: "3.0.1",
+  curated: "2026-11-05", verifiedFromBrazil: "2026-11-05",
   categories: [
     { id: "principais", name: "Abertas nacionais" },
     { id: "noticias", name: "Notícias 24h" },
@@ -43,17 +43,17 @@ window.TV_CATALOG = {
     },
     {
       id: "sbt", num: 2, name: "SBT", short: "SBT", hue: 4, category: "principais", featured: true,
-      tagline: "Sinal nacional e afiliadas",
+      tagline: "Pelas afiliadas, sinal nacional",
       sources: [
-        { type: "youtube", video: "ABVQXgr2LW4", label: "YouTube oficial do SBT", origin: "oficial" },
-        { type: "hls", url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8", label: "SBT Interior (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://cdn.live.br1.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/chunklist.m3u8", label: "SBT Interior · servidor 2", origin: "afiliada" },
         { type: "hls", url: "https://6836041ea1117.streamlock.net/cverde/cverde/playlist.m3u8", label: "TV Cidade Verde (afiliada)", origin: "afiliada" },
-        { type: "hls", url: "https://video09.logicahost.com.br/sbtcuiaba/sbtcuiaba/playlist.m3u8", label: "SBT Cuiabá (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://video09.logicahost.com.br/sbtroo/sbtroo/playlist.m3u8", label: "SBT Rondonópolis (afiliada)", origin: "afiliada" },
+        { type: "hls", url: "https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8", label: "SBT Interior (afiliada)", origin: "afiliada" },
+        { type: "hls", url: "https://video09.logicahost.com.br/sbtcuiaba/sbtcuiaba/playlist.m3u8", label: "SBT Cuiabá (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://video09.logicahost.com.br/sbtmutum/sbtmutum/playlist.m3u8", label: "SBT Nova Mutum (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://stream.amsolution.net.br:8443/live/60d0a8ea6b884/index.m3u8", label: "TV Difusora Leste (afiliada)", origin: "afiliada" },
-        { type: "hls", url: "https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u", label: "TV Paraense (afiliada)", origin: "afiliada" }
+        { type: "hls", url: "https://video09.logicahost.com.br/tvparaense/tvparaense/playlist.m3u", label: "TV Paraense (afiliada)", origin: "afiliada" },
+        { type: "youtube", video: "ABVQXgr2LW4", label: "YouTube oficial do SBT", origin: "oficial" }
       ],
       match: ["SBTNacional.br", "SBTInterior.br", "SBTCuiaba.br", "SBTRondonopolis.br", "SBTNovaMutum.br", "TVDifusoraLeste.br", "TVParaense.br", "VTV.br", "TVAllamanda.br"],
       official: [
@@ -88,10 +88,10 @@ window.TV_CATALOG = {
       id: "redetv", num: 5, name: "RedeTV!", short: "RedeTV!", hue: 300, category: "principais",
       tagline: "Sinal SP e afiliadas",
       sources: [
-        { type: "hls", url: "https://hls.brasilstream.com.br/live/redetv/redetv/playlist.m3u8", label: "RedeTV! SP", origin: "oficial" },
         { type: "hls", url: "https://tv01.zas.media:1936/redetvparana/redetvparana/playlist.m3u8", label: "RedeTV! Paraná (afiliada)", origin: "afiliada" },
         { type: "hls", url: "https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8", label: "TV Arapuan (afiliada PB)", origin: "afiliada" },
-        { type: "hls", url: "https://6836041ea1117.streamlock.net/tvodia/tvodia/playlist.m3u8", label: "O Dia TV (afiliada PI)", origin: "afiliada" }
+        { type: "hls", url: "https://6836041ea1117.streamlock.net/tvodia/tvodia/playlist.m3u8", label: "O Dia TV (afiliada PI)", origin: "afiliada" },
+        { type: "hls", url: "https://hls.brasilstream.com.br/live/redetv/redetv/playlist.m3u8", label: "RedeTV! SP (não é 24h)", origin: "oficial" }
       ],
       match: ["RedeTV.br", "RedeTVParana.br", "TVArapuan.br", "ODiaTV.br"],
       official: [{ label: "Site da RedeTV!", url: "https://www.redetv.uol.com.br/", hint: "Portal oficial" }]
